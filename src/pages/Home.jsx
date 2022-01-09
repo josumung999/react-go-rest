@@ -6,31 +6,44 @@ import axios from 'axios';
 
 const Home = () => {
   const [users, setUsers] = useState({ meta: {}, data: [] });
-  // const [pageCount, setPageCount] = useState(1);
   const [isLoaded, setIsLoaded] = useState(false);
-  // const [currentPage, setCurrentPage] = useState(1);
+  const [query, setQuery] = useState('');
+  const [search, setSearch] = useState('');
   
-
-  // base url
-  const URL = `https://gorest.co.in/public/v1/users`;
 
   useEffect(async () => {
     const handleFetchData = async () => {
-      const result = await axios.get(
-        URL
-      );
+      let result = null;
+      if (!query) {
+        result = await axios.get('https://gorest.co.in/public/v1/users');
+      } else {
+        result = await axios.get(`https://gorest.co.in/public/v1/users?name=${search}`)
+      }
   
       setUsers(result.data);
-      setIsLoaded(true)
+      setIsLoaded(true);
     }
 
     handleFetchData();
-  }, []);
+  }, [search]);
 
   return (
     <Fragment>
       <div className="container py-6">
         <h1 className="h1">GO Rest</h1>
+        <Fragment>
+          <input
+            type="text"
+            value={query}
+            onChange={event => setQuery(event.target.value)} 
+          />
+          <button
+            type='button'
+            onClick={() => setSearch(query)}
+          >
+            Search
+          </button>
+        </Fragment>
         {isLoaded ? (
           <Fragment>
             <table className="table">
