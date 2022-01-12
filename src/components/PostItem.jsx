@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import Comments from './Comments';
 
 
 const PostItem = () => {
@@ -16,9 +17,7 @@ const PostItem = () => {
         setIsLoaded(true);
     };
     getPost()
-    console.log(post);
   }, [id])
-
   return (
     <Fragment>
       <div className="container my-6">
@@ -32,6 +31,9 @@ const PostItem = () => {
             <p className="lead">
               {post.data.body}
             </p>
+            <hr className="my-4" />
+            <h2 className="h2 mb-4">Latest Comments</h2>
+            <Comments />
           </Fragment>
         ) : (
           <h3 className="h3">Loading ...</h3>
