@@ -20,7 +20,7 @@ const Navbar = () => {
               <Link className="nav-link" to='/users/register'>Create User</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to='/posts/creates'>Create Post</Link>
+              <Link className="nav-link" to='/posts/create'>Create Post</Link>
             </li>
           </ul>
         </div>

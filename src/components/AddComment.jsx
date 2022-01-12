@@ -63,7 +63,7 @@ const AddComment = (props) => {
           </div>
         </div>
         <div className="form-group my-2">
-        <label htmlFor="floatingTextarea">Your comment</label>
+          <label htmlFor="floatingTextarea">Your comment</label>
           <textarea
             name="body"
             value={body}

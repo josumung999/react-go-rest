@@ -1,8 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import ReactPaginate from 'react-paginate';
 import ListItem from '../components/ListItem';
 import axios from 'axios';
-
 
 const Home = () => {
   const [users, setUsers] = useState({ meta: {}, data: [] });
