@@ -34,11 +34,12 @@ const CreatePost = (props) => {
 
   return (
     <Fragment>
-      <div className="container">
+      <div className="container" style={{ paddingTop: "24px" }}>
         <h3 className="h3">Create New Post</h3>
-        <p className="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi exercitationem fugiat dolore ex obcaecati. Molestias voluptatibus amet vero fugit! Aut aliquid tempora natus sint commodi laudantium perferendis necessitatibus tempore</p>
+        <p className="my-4 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi exercitationem fugiat dolore ex obcaecati. Molestias voluptatibus amet vero fugit! Aut aliquid tempora natus sint commodi laudantium perferendis necessitatibus tempore</p>
         <form onSubmit={e => onSubmit(e)}>
           <div className="form-group mb-2">
+          <label htmlFor="user_id" className="text-secondary">Post Author ID</label>
             <input
               type="number"
               className="form-control"
@@ -50,6 +51,7 @@ const CreatePost = (props) => {
             />
           </div>
           <div className="form-group mb-2">
+            <label htmlFor="title" className="text-secondary">Post Title</label>
             <input
               type="text"
               className="form-control"
@@ -61,7 +63,7 @@ const CreatePost = (props) => {
             />
           </div>
           <div className="form-group my-2">
-            <label htmlFor="floatingTextarea">Share your thoughts !</label>
+            <label htmlFor="floatingTextarea" className="text-secondary">Share your thoughts !</label>
             <textarea
               name="body"
               value={body}
