@@ -33,7 +33,7 @@ const PostItem = () => {
             </p>
             <hr className="my-4" />
             <h2 className="h2 mb-4">Latest Comments</h2>
-            <Comments />
+            <Comments postId={post.data.id} />
           </Fragment>
         ) : (
           <h3 className="h3">Loading ...</h3>

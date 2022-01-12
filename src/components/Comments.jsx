@@ -2,10 +2,10 @@ import { Fragment, useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-const Comments = () => {
+const Comments = (props) => {
   const [comments, setComments] = useState({ meta: {}, data: [] });
   const [isLoaded, setIsLoaded] = useState(false);
-   const postId = 2;
+   const postId = props.postId;
   useEffect(() => {
     const getComments = async () => {
       const res = await axios(`https://gorest.co.in/public/v1/posts/${postId}/comments`);
@@ -39,7 +39,7 @@ const Comments = () => {
         </Fragment>
 
       ) : (
-        <h3 className="h3">Loading comments ...</h3>
+        <h6 className="h6">Loading comments ...</h6>
       )}
     </div>
   )
