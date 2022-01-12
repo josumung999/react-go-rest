@@ -17,7 +17,11 @@ const Comments = (props) => {
 
   return (
     <div>
-      {isLoaded ? (
+      {!isLoaded ? (
+        <h6 className="h6">Loading ...</h6>
+      ) : (comments.data.length === 0 ? (
+        <h6 className="h6">No Comments yet</h6>
+      ) : (
         <Fragment>
           {comments.data.map(item => (
             <div className="card mb-2" key={item.id}>
@@ -37,9 +41,7 @@ const Comments = (props) => {
             </div>
           ))}
         </Fragment>
-
-      ) : (
-        <h6 className="h6">Loading comments ...</h6>
+      )
       )}
     </div>
   )
