@@ -46,29 +46,31 @@ const Home = () => {
         </Fragment>
         {isLoaded ? (
           <Fragment>
-            <table className="table">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Gender</th>
-                  <th scope="col">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.data.map((item) => (
-                  <ListItem 
-                    id={item.id}
-                    name={item.name}
-                    email={item.email}
-                    gender={item.gender}
-                    status={item.status}
-                    key={item.id}
-                  />
-                ))}
-              </tbody>
-            </table>
+            <div className="table-responsive">
+              <table className="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {users.data.map((item) => (
+                    <ListItem 
+                      id={item.id}
+                      name={item.name}
+                      email={item.email}
+                      gender={item.gender}
+                      status={item.status}
+                      key={item.id}
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </Fragment>
 
         ) : (
