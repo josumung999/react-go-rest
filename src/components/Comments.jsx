@@ -20,7 +20,7 @@ const Comments = (props) => {
       {isLoaded ? (
         <Fragment>
           {comments.data.map(item => (
-            <div className="card" key={item.id}>
+            <div className="card mb-2" key={item.id}>
               <div className="card-header">
                 Comment by {item.name}
               </div>

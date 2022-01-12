@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Comments from './Comments';
+import AddComment from './AddComment';
 
 
 const PostItem = () => {
@@ -31,6 +32,8 @@ const PostItem = () => {
             <p className="lead">
               {post.data.body}
             </p>
+            <hr className="my-4" />
+            <AddComment postId={post.data.id} />
             <hr className="my-4" />
             <h3 className="h3 mb-4">Latest Comments</h3>
             <Comments postId={post.data.id} />
