@@ -9,11 +9,20 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="navbar-nav justify-content-end me-auto mb-2 mb-lg-0">
-            <Link to="/" className="nav-link">Users</Link>
-            <Link to="/posts" className="nav-link">Posts</Link>
-            <a href="!#" className="nav-link">Create Account</a>
-          </div>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">Users</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/posts" className="nav-link">Posts</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to='/users/register'>Create User</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to='/posts/creates'>Create Post</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
