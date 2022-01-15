@@ -35,7 +35,7 @@ const CreateUser = (props) => {
 
   return (
     <Fragment>
-      <div className="container">
+      <div className="container" style={{ paddingTop: "72px" }}>
         <h3 className="h3">Create User Account</h3>
         <p className="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi exercitationem fugiat dolore ex obcaecati. Molestias voluptatibus amet vero fugit! Aut aliquid tempora natus sint commodi laudantium perferendis necessitatibus tempore</p>
         <form onSubmit={e => onSubmit(e)}>

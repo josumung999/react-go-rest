@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Fragment>
-      <div className="container">
+      <div className="container"  style={{ paddingTop: "72px" }}>
         <div className="row">
             {isLoaded ? (
               <Fragment>

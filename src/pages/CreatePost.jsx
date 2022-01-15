@@ -34,7 +34,7 @@ const CreatePost = (props) => {
 
   return (
     <Fragment>
-      <div className="container" style={{ paddingTop: "24px" }}>
+      <div className="container" style={{ paddingTop: "72px" }}>
         <h3 className="h3">Create New Post</h3>
         <p className="my-4 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sequi exercitationem fugiat dolore ex obcaecati. Molestias voluptatibus amet vero fugit! Aut aliquid tempora natus sint commodi laudantium perferendis necessitatibus tempore</p>
         <form onSubmit={e => onSubmit(e)}>
@@ -75,8 +75,8 @@ const CreatePost = (props) => {
           </div>
           <input
             type="submit"
-            className="btn btn-primary"
-            value ="Create User Account"
+            className="btn btn-success"
+            value ="Create New Post"
           />
         </form>
       </div>
