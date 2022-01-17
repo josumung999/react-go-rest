@@ -19,7 +19,7 @@ const Navbar = (props) => {
   }, [])
 
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${navBackground ? 'bg-dark navbar-dark' : 'bg-trasparent navbar-dark'} `} style={{ transition: '1s ease'}}>
+    <nav className={`navbar navbar-expand-lg fixed-top ${navBackground ? 'navbar-light bg-light' : 'navbar-dark bg-transparent'} `} style={{ transition: '1s ease'}}>
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Go_Logo_Aqua.svg/1200px-Go_Logo_Aqua.svg.png" alt="" height="24" />
