@@ -37,45 +37,46 @@ const AddComment = (props) => {
     <Fragment>
       <h3 className="h3">Add a Comment</h3>
       <p className="my-4">What's on your mind ?</p>
-      <form onSubmit={e => onSubmit(e)}>
-        <div className="row g-3">
-          <div className="col">
-            <input
-              type="text"
-              className="form-control"
-              name="name"
-              placeholder="Your Name"
-              value={name}
-              onChange={e => onChange(e)}
-              required
-            />
-          </div>
-          <div className="col">
-            <input
-              type="email"
-              className="form-control"
-              name="email"
-              value={email}
-              onChange={e => onChange(e)}
-              placeholder="Your email adress"
-              required
-            />
-          </div>
+      <form id="contactForm" onSubmit={e => onSubmit(e)}>
+        <div className="form-floating">
+          <input
+            type="text"
+            className="form-control"
+            name="name"
+            placeholder="Name"
+            value={name}
+            onChange={e => onChange(e)}
+            required
+          />
+          <label for="name">Name</label>
         </div>
-        <div className="form-group my-2">
-          <label htmlFor="floatingTextarea">Your comment</label>
+        <div className="form-floating">
+          <input
+            type="email"
+            className="form-control"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={e => onChange(e)}
+            required
+          />
+          <label for="name">Email</label>
+        </div>
+        <div className="form-floating">
           <textarea
             name="body"
             value={body}
             className="form-control"
             onChange={e => onChange(e)}
-            style={{ height: "100px" }}
+            style={{ height: "12rem" }}
             required
+            placeholder="Your Comment ..."
           ></textarea>
+          <label for="name">Your Comment ...</label>
         </div>
         <input
           type="submit"
-          className="btn btn-primary"
+          className="btn btn-primary my-2"
           value ="Add Comment"
         />
       </form>

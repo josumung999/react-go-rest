@@ -21,7 +21,7 @@ const PostItem = () => {
   }, [id])
   return (
     <Fragment>
-      <div className="container my-6" style={{paddingTop: "24px"}}>
+      <div className="container my-6"  style={{ paddingTop: "72px" }}>
         {isLoaded ? (
           <Fragment>
             <h2 className="h2">

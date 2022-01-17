@@ -27,16 +27,15 @@ const Home = () => {
 
   return (
     <Fragment>
-      <header className="bg-dark py-5">
-        <div className="container px-5">
-          <div className="row gx-5 justify-content-center">
-            <div className="col-lg-6">
-              <div className="text-center my-5">
-                <h1 className="display-5 fw-bolder text-white mb-2">
-                  GO REST
-                </h1>
-                <p className="lead text-white-50 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia aut sunt itaque minima velit sint ipsum.</p>
-                <div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
+      <header className="masthead" style={{ backgroundImage: `url(https://raw.githubusercontent.com/StartBootstrap/startbootstrap-clean-blog/master/dist/assets/img/home-bg.jpg')` }} >
+        <div className="container position-relative px-4 px-lg-5">
+          <div className="row gx-4 gx-lg-5 justify-content-center">
+            <div className="col-md-10 col-lg-8 col-xl-7">
+              <div className="site-heading">
+                <h1>GO REST</h1>
+                <span className="subheading">Lorem ipsum dolor sit amet consectetur.</span>
+              </div>
+              <div className="d-grid gap-3 d-sm-flex my-3 justify-content-sm-center">
                   <div className="input-group mb-3">
                     <input
                       type="text"
@@ -54,11 +53,11 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
       </header>
+      
       <div className="container py-4">
         <div className="row">
           <div className="col">

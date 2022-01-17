@@ -17,20 +17,37 @@ function App() {
 
   return (
     <Fragment>
-      <div className="container"  style={{ paddingTop: "72px" }}>
-        <div className="row">
+      <header className="masthead" style={{ backgroundImage: `url(https://raw.githubusercontent.com/StartBootstrap/startbootstrap-clean-blog/master/dist/assets/img/home-bg.jpg')` }} >
+        <div className="container position-relative px-4 px-lg-5">
+          <div className="row gx-4 gx-lg-5 justify-content-center">
+            <div className="col-md-10 col-lg-8 col-xl-7">
+              <div className="site-heading">
+                <h1>Go Blog</h1>
+                <span className="subheading">Get the latest users posts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div className="container px-4 px-lg-5">
+        <div className="row gx-4 gx-lg-5 justify-content-center">
             {isLoaded ? (
               <Fragment>
                 {data.data.map((item) => (
-                  <div className="col-lg-3 col-md-6 col-sm-12" key={item.id}>
-                    <div className="card text-dark bg-light mb-3">
-                      <div className="card-header">User Id: {item.user_id}</div>
-                      <div className="card-body">
-                        <h5 className="card-title">{item.title}</h5>
-                        <Link to={`/posts/${item.id}`} className='btn btn-link'>Read more ...</Link>
-                      </div>
+                  <div className="col-md-10 col-lg-8 col-xl-7">
+                    <div className="post-review">
+                      <Link to={`/posts/${item.id}`}>
+                        <h2 className="post-title">
+                          {item.title}
+                        </h2>
+                      </Link>
+                      <p className="post-meta">
+                        Posted By <Link to={`/users/${item.user_id}`}>User {item.user_id}</Link>
+                      </p>
                     </div>
+                    <hr className="my-4"/>
                   </div>
+                  
                 ))}
               </Fragment>
             ) : (

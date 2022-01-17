@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 // Importing bootstrap js files
 import 'bootstrap/dist/js/bootstrap.bundle';
