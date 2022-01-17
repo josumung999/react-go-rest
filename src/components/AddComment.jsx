@@ -27,7 +27,7 @@ const AddComment = (props) => {
       await axios.post(`https://gorest.co.in/public/v1/posts/${postId}/comments`, formData, config);
 
       window.alert('Comment added successfully');
-      window.location.href = window.location.href;
+      window.location = window.location.href;
     } catch (err) {
       console.error(err)
     }
