@@ -7,7 +7,7 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [query, setQuery] = useState('');
   const [search, setSearch] = useState('');
-  
+  const background = "https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/assets/img/home-bg.jpg?raw=true"
 
   useEffect(async () => {
     const handleFetchData = async () => {
@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <Fragment>
-      <header className="masthead" style={{ backgroundImage: `url(https://raw.githubusercontent.com/StartBootstrap/startbootstrap-clean-blog/master/dist/assets/img/home-bg.jpg')` }} >
+      <header className="masthead" style={{ backgroundImage: `url(${background})` }} >
         <div className="container position-relative px-4 px-lg-5">
           <div className="row gx-4 gx-lg-5 justify-content-center">
             <div className="col-md-10 col-lg-8 col-xl-7">
@@ -68,14 +68,13 @@ const Home = () => {
           <div className="row my-4">
             <Fragment>
                 {users.data.map((item) => (
-                <div className="col-md-6 col-sm-12">
+                <div className="col-md-6 col-sm-12" key={item.id}>
                   <ListItem 
                     id={item.id}
                     name={item.name}
                     email={item.email}
                     gender={item.gender}
                     status={item.status}
-                    key={item.id}
                   />
                 </div>
                 ))}

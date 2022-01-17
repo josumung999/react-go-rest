@@ -48,7 +48,7 @@ const AddComment = (props) => {
             onChange={e => onChange(e)}
             required
           />
-          <label for="name">Name</label>
+          <label htmlFor="name">Name</label>
         </div>
         <div className="form-floating">
           <input
@@ -60,7 +60,7 @@ const AddComment = (props) => {
             onChange={e => onChange(e)}
             required
           />
-          <label for="name">Email</label>
+          <label htmlFor="email">Email</label>
         </div>
         <div className="form-floating">
           <textarea
@@ -72,7 +72,7 @@ const AddComment = (props) => {
             required
             placeholder="Your Comment ..."
           ></textarea>
-          <label for="name">Your Comment ...</label>
+          <label htmlFor="body">Your Comment ...</label>
         </div>
         <input
           type="submit"
