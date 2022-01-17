@@ -7,13 +7,15 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const background = "https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/assets/img/post-bg.jpg?raw=true"
 
-  useEffect(async () => {
-    const result = await axios(
-      'https://gorest.co.in/public/v1/posts',
-    );
-
-    setData(result.data);
-    setIsLoaded(true);
+  useEffect(() => {
+    const handleFetchData = async () => {
+      const result = await axios(
+        'https://gorest.co.in/public/v1/posts',
+      );
+      setData(result.data);
+      setIsLoaded(true);
+    }
+    handleFetchData();
   }, []);
 
   return (

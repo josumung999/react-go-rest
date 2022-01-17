@@ -9,7 +9,7 @@ const Home = () => {
   const [search, setSearch] = useState('');
   const background = "https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/assets/img/home-bg.jpg?raw=true"
 
-  useEffect(async () => {
+  useEffect(() => {
     const handleFetchData = async () => {
       let result = null;
       if (!query) {
@@ -23,7 +23,7 @@ const Home = () => {
     }
 
     handleFetchData();
-  }, [search]);
+  }, [query, search]);
 
   return (
     <Fragment>

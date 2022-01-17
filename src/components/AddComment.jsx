@@ -24,7 +24,7 @@ const AddComment = (props) => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post(`https://gorest.co.in/public/v1/posts/${postId}/comments`, formData, config);
+      await axios.post(`https://gorest.co.in/public/v1/posts/${postId}/comments`, formData, config);
 
       window.alert('Comment added successfully');
       window.location.href = window.location.href;

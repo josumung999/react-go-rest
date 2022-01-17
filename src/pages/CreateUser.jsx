@@ -24,7 +24,7 @@ const CreateUser = (props) => {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post(`https://gorest.co.in/public/v1/users`, formData, config);
+      await axios.post(`https://gorest.co.in/public/v1/users`, formData, config);
 
       window.alert('Account Created Successfully');
       window.location.href = 'http://localhost:3000/'
